@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180602121626) do
+ActiveRecord::Schema.define(version: 20180602150631) do
 
-  create_table "information", force: :cascade do |t|
+  create_table "turtles", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
     t.string "locations"
