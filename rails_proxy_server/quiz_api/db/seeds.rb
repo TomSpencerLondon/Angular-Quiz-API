@@ -10,7 +10,7 @@
 Turtle.create!([
   {
       name: "Green Turtle",
-      image_url: "http://www.what-do-turtles-eat.com/wp-content/uploads/2014/10/Sea-Turtles-Habitat.jpg",
+      image_url: "https://www.konicaminolta.com/kids/endangered_animals/library/sea/img/g-turtle_img01-l.jpg",
       locations: "Tropical and subtropical oceans worldwide",
       size: "Up to 1.5m and up to 300kg",
       lifespan: "Over 80 years",
