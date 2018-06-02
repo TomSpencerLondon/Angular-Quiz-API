@@ -2,13 +2,24 @@
 
   angular
     .module("turtleFacts")
-    .controller("listCtrl", ['$http', function ($http){
+    .controller("listCtrl", ['$http', ListController]); 
+    
+    
+    function ListController($http){
       var vm = this; 
+
       vm.activeTurtle = {};
       vm.changeActiveTurtle = changeActiveTurtle;
+      vm.activateQuiz = activateQuiz;
+      vm.search = "";
+      vm.quizActive = false;
 
       function changeActiveTurtle(index) {
         vm.activeTurtle = index
+      }
+
+      function activateQuiz(){
+        vm.quizActive = true
       }
 
 
@@ -19,6 +30,6 @@
 
 
 
-    }]);
+    };
 
 })();
