@@ -2,12 +2,14 @@
 
   angular
     .module("turtleFacts")
-    .controller("listCtrl", ['$http', ListController]); 
+    .controller("listCtrl", ListController); 
     
+    ListController.$inject = ['quizMetrics', '$http'];
     
-    function ListController($http){
+    function ListController(quizMetrics, $http){
       var vm = this; 
 
+      vm.quizMetrics = quizMetrics;
       vm.activeTurtle = {};
       vm.changeActiveTurtle = changeActiveTurtle;
       vm.activateQuiz = activateQuiz;
@@ -19,7 +21,7 @@
       }
 
       function activateQuiz(){
-        vm.quizActive = true
+        quizMetrics.changeState(true);
       }
 
 
@@ -27,8 +29,6 @@
       .then(function(response){
         vm.data = response.data; 
       })
-
-
 
     };
 

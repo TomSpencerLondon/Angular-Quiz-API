@@ -23,7 +23,7 @@
           Learn about all the turtles before you decide to take on the 
           <strong>Turtle Quiz</strong>
         </h3>
-        <div ng-controller="listCtrl as list" ng-hide="list.quizActive">
+        <div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive">
           <form class="form-inline well well-sm clearfix">
             <span class="glyphicon glyphicon-search"></span>
             <input type="text" placeholder="Search..." 
@@ -113,10 +113,8 @@
           </div>
         </div>
             <div ng-controller="quizCtrl as quiz">
-
             </div>
          
-        
       </div>
     </div>
 
@@ -125,7 +123,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/list.js"></script>
-    <script src="js/controllers/quiz.js"></script>
     <script src="js/factories/quizMetrics.js"></script>
+    <script src="js/controllers/quiz.js"></script>
   </body>
 </html>
